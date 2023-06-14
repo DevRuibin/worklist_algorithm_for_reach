@@ -47,6 +47,20 @@ def make_graph():
 
 
 if __name__ == '__main__':
+    """
+    Example program: 
+        public class GCD {
+            public int gcd(int x, int y) {
+            int tmp;                  // A: def x, y, tmp
+            while (y != 0) {          // B: use y
+                tmp = x % y;          // C: def tmp, use x, y
+                x = y;                // D: def x, use y
+                y = tmp;              // E: def y, use tmp
+            }
+            return x;                 // F: use x
+        }
+    }
+    """
     [A, B, C, D, E, F] = make_graph()
 
     work_list_algorithm([A, B, C, D, E, F])
